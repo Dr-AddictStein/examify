@@ -4,6 +4,7 @@ import mongoose, { connect } from "mongoose";
 import cors from "cors";
 
 import userRoutes from "./routes/userRoutes.js";
+import examRoutes from './routes/examRoutes.js';
 
 dotenv.config();
 
@@ -24,6 +25,11 @@ app.use((req, res, next) => {
 
 // user
 app.use("/api/user", userRoutes);
+
+
+// exam
+
+app.use("/api/exam",examRoutes);
 
 
 
