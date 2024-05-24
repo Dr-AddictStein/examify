@@ -5,6 +5,7 @@ import cors from "cors";
 
 import userRoutes from "./routes/userRoutes.js";
 import examRoutes from './routes/examRoutes.js';
+import sectionRoutes from './routes/sectionRoutes.js';
 
 dotenv.config();
 
@@ -28,8 +29,11 @@ app.use("/api/user", userRoutes);
 
 
 // exam
-
 app.use("/api/exam",examRoutes);
+
+
+// section
+app.use("/api/section",sectionRoutes);
 
 
 

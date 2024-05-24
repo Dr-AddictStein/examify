@@ -9,7 +9,9 @@ router.get('/:id',getSingleExam);
 
 
 router.post('/',createExam);
+
 router.patch('/:id',updateExam);
+
 router.delete('/:id',deleteExam);
 
 
