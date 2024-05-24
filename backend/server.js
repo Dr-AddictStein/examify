@@ -6,6 +6,7 @@ import cors from "cors";
 import userRoutes from "./routes/userRoutes.js";
 import examRoutes from './routes/examRoutes.js';
 import sectionRoutes from './routes/sectionRoutes.js';
+import moduleRoutes from './routes/moduleRoutes.js';
 
 dotenv.config();
 
@@ -34,6 +35,10 @@ app.use("/api/exam",examRoutes);
 
 // section
 app.use("/api/section",sectionRoutes);
+
+
+// module
+app.use("/api/module",moduleRoutes);
 
 
 
