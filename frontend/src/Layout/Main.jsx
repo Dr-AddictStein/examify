@@ -1,15 +1,17 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
 
 const Main = () => {
+    const location = useLocation();
+    const shouldRenderNavbarAndFooter = !['/login', '/signup'].includes(location.pathname);
     return (
         <div>
-            <Navbar />
-            <div className='pt-24 min-h-[81vh]'>
+            {shouldRenderNavbarAndFooter && <Navbar />}
+            <div className='min-h-[100vh]'>
                 <Outlet />
             </div>
-            <Footer />
+            {shouldRenderNavbarAndFooter && <Footer />}
         </div>
     );
 };
