@@ -27,6 +27,11 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  
+  address: {
+    type: String,
+    required: true,
+  },
 });
 
 userSchema.statics.signup = async function (
@@ -34,10 +39,17 @@ userSchema.statics.signup = async function (
   email,
   role,
   phone,
-  password
+  password,
+  address
 ) {
   const exist = await this.findOne({ email });
   const existU = await this.findOne({ username });
+  console.log('req.body' ,username,
+  email,
+  role,
+  phone,
+  password,
+  address);
 
   if (exist) {
     throw Error("Email already exists.!.");
@@ -65,6 +77,7 @@ userSchema.statics.signup = async function (
     role,
     phone,
     password: hash,
+    address
   });
 
   return user;

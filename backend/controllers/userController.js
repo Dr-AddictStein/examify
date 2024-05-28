@@ -19,10 +19,11 @@ export const loginUser = async (req, res) => {
 };
 
 export const singupUser = async (req, res) => {
-  const { username, email, phone, password } = req.body;
+  const { username, email, phone, password, address } = req.body;
   const role = "user";
   try {
-    const user = await userModel.signup(username, email, role, phone, password);
+    const user = await userModel.signup(username, email, role, phone, password, address);
+    
 
     const token = createToken(user._id);
 
