@@ -12,9 +12,68 @@ const Chapters = () => {
                 </div>
             </div>
             <div className="w-11/12 mx-auto">
-                <div className="bg-[#ffc7c2] mb-2 w-fit px-5 py-2 rounded-xl">
+                <div className="bg-[#ffc7c2] mb-2 w-fit px-5 py-2 rounded-xl cursor-pointer" onClick={() => document.getElementById('my_modal_1').showModal()}>
                     Create New Chapter
                 </div>
+                <dialog id="my_modal_1" className="modal">
+                    <div className="modal-box w-11/12 max-w-5xl bg-white text-xl">
+                        <div>
+                            <div className="grid grid-cols-4 items-center">
+                                <p className="">Chapter Name: </p>
+                                <input type="text" className="bg-[#d4fcd8] col-span-3 m-2 w-2/3" />
+                            </div>
+                            <div className="grid grid-cols-4 items-center">
+                                <p className="">Exam Name: </p>
+                                <input type="text" className="bg-[#d4fcd8] col-span-3 m-2 w-2/3" />
+                            </div>
+                            <div className="grid grid-cols-4 items-center">
+                                <p className="">Section Name: </p>
+                                <input type="text" className="bg-[#d4fcd8] col-span-3 m-2 w-2/3" />
+                            </div>
+                            <div className="grid grid-cols-4 items-center">
+                                <p className="">Module Name: </p>
+                                <input type="text" className="bg-[#d4fcd8] col-span-3 m-2 w-2/3" />
+                            </div>
+                            <div className="grid grid-cols-4 items-center">
+                                <p className="">MultiQuestion Module: </p>
+                                <div className="flex items-center gap-5">
+                                    <p>Yes</p>
+                                    <input type="checkbox" className="toggle bg-[#ffc7c2]" checked />
+                                    <p>NO</p>
+                                </div>
+                            </div>
+                            <div className="grid grid-cols-4 items-center">
+                                <p className="">Question Size: </p>
+                                <input type="text" className="bg-[#d4fcd8] col-span-3 m-2 w-[50px]" />
+                            </div>
+                            <div className="grid grid-cols-4 items-center">
+                                <p className="">Total Question For Module: </p>
+                                <div className="flex items-center">
+                                    <input type="text" className="bg-[#d4fcd8] col-span-3 m-2 w-[50px]" />
+                                    <p>/85</p>
+                                </div>
+                            </div>
+                            <div className="grid grid-cols-4 items-center">
+                                <p className="">Upload Question (excel file only): </p>
+                                <input type="file" className="file-input file-input-bordered w-full max-w-xs" />
+                            </div>
+                            <div className="grid grid-cols-4 items-center">
+                                <p className="">Status: </p>
+                                <div className="flex items-center gap-5">
+                                    <p>Active</p>
+                                    <input type="checkbox" className="toggle bg-[#ffc7c2]" checked />
+                                    <p>Diactive</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="modal-action">
+                            <form method="dialog">
+                                <button className="bg-[#ffc7c2] py-3 px-5 rounded-lg mr-2">Add Chapter</button>
+                                <button className="bg-[#ffc7c2] py-3 px-5 rounded-lg">Cancel</button>
+                            </form>
+                        </div>
+                    </div>
+                </dialog>
                 <div className="">
                     <table className="table w-full ">
                         <thead className="bg-[#ffc7c2]">
@@ -36,7 +95,66 @@ const Chapters = () => {
                                 <td>12/16/2020</td>
                                 <td className="flex gap-2">
                                     <HiDotsHorizontal className="bg-[#ffc7c2] p-1 text-2xl rounded-md" />
-                                    <FaRegEdit className="bg-[#ffc7c2] p-1 text-2xl rounded-md" />
+                                    <FaRegEdit className="bg-[#ffc7c2] cursor-pointer p-1 text-2xl rounded-md" onClick={() => document.getElementById('my_modal_2').showModal()} />
+                                    <dialog id="my_modal_2" className="modal">
+                                        <div className="modal-box w-11/12 max-w-5xl bg-[#e4ccfe] text-xl">
+                                            <div>
+                                                <div className="grid grid-cols-4 items-center">
+                                                    <p className="">Chapter Name: </p>
+                                                    <input type="text" className="bg-[#d4fcd8] col-span-3 m-2 w-2/3" />
+                                                </div>
+                                                <div className="grid grid-cols-4 items-center">
+                                                    <p className="">Exam Name: </p>
+                                                    <input type="text" className="bg-[#d4fcd8] col-span-3 m-2 w-2/3" />
+                                                </div>
+                                                <div className="grid grid-cols-4 items-center">
+                                                    <p className="">Section Name: </p>
+                                                    <input type="text" className="bg-[#d4fcd8] col-span-3 m-2 w-2/3" />
+                                                </div>
+                                                <div className="grid grid-cols-4 items-center">
+                                                    <p className="">Module Name: </p>
+                                                    <input type="text" className="bg-[#d4fcd8] col-span-3 m-2 w-2/3" />
+                                                </div>
+                                                <div className="grid grid-cols-4 items-center">
+                                                    <p className="">MultiQuestion Module: </p>
+                                                    <div className="flex items-center gap-5">
+                                                        <p>Yes</p>
+                                                        <input type="checkbox" className="toggle bg-[#ffc7c2]" checked />
+                                                        <p>NO</p>
+                                                    </div>
+                                                </div>
+                                                <div className="grid grid-cols-4 items-center">
+                                                    <p className="">Question Size: </p>
+                                                    <input type="text" className="bg-[#d4fcd8] col-span-3 m-2 w-[50px]" />
+                                                </div>
+                                                <div className="grid grid-cols-4 items-center">
+                                                    <p className="">Total Question For Module: </p>
+                                                    <div className="flex items-center">
+                                                        <input type="text" className="bg-[#d4fcd8] col-span-3 m-2 w-[50px]" />
+                                                        <p>/85</p>
+                                                    </div>
+                                                </div>
+                                                <div className="grid grid-cols-4 items-center">
+                                                    <p className="">Upload Question (excel file only): </p>
+                                                    <input type="file" className="file-input file-input-bordered w-full max-w-xs" />
+                                                </div>
+                                                <div className="grid grid-cols-4 items-center">
+                                                    <p className="">Status: </p>
+                                                    <div className="flex items-center gap-5">
+                                                        <p>Active</p>
+                                                        <input type="checkbox" className="toggle bg-[#ffc7c2]" checked />
+                                                        <p>Diactive</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="modal-action">
+                                                <form method="dialog">
+                                                    <button className="bg-[#ffc7c2] py-3 px-5 rounded-lg mr-2">Update</button>
+                                                    <button className="bg-[#ffc7c2] py-3 px-5 rounded-lg">Cancel</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </dialog>
                                     <RiDeleteBin2Line className="bg-[#ffc7c2] p-1 text-2xl rounded-md" />
                                 </td>
                             </tr>
