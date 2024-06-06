@@ -23,7 +23,7 @@ const Signup = () => {
         })
             .then(res => res.json())
             .then(data => {
-                alert(data);
+                alert(data.error);
                 if (data.insertedId) {
                     alert("user created sucessfully!");
                     form.reset();
