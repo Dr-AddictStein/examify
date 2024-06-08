@@ -1,5 +1,5 @@
 import { FaRegEdit } from "react-icons/fa";
-import { HiDotsHorizontal } from "react-icons/hi";
+import { IoEyeOutline } from "react-icons/io5";
 import { RiDeleteBin2Line } from "react-icons/ri";
 
 const Exam = () => {
@@ -105,7 +105,7 @@ const Exam = () => {
                                 <td>Canada</td>
                                 <td>12/16/2020</td>
                                 <td className="flex gap-2">
-                                    <HiDotsHorizontal className="bg-[#ffc7c2] cursor-pointer p-1 text-2xl rounded-md" onClick={() => document.getElementById('my_modal_3').showModal()} />
+                                    <IoEyeOutline className="bg-[#ffc7c2] cursor-pointer p-1 text-2xl rounded-md" onClick={() => document.getElementById('my_modal_3').showModal()} />
                                     <dialog id="my_modal_3" className="modal">
                                         <div className="modal-box w-11/12 max-w-5xl bg-[#e4ccfe] text-xl">
                                             <div className="grid grid-cols-4">
@@ -213,7 +213,7 @@ const Exam = () => {
                                 <td>United States</td>
                                 <td>12/5/2020</td>
                                 <td className="flex gap-2">
-                                    <HiDotsHorizontal className="bg-[#ffc7c2] p-1 text-2xl rounded-md" />
+                                    <IoEyeOutline className="bg-[#ffc7c2] p-1 text-2xl rounded-md" />
                                     <FaRegEdit className="bg-[#ffc7c2] p-1 text-2xl rounded-md" />
                                     <RiDeleteBin2Line className="bg-[#ffc7c2] p-1 text-2xl rounded-md" />
                                 </td>
@@ -226,7 +226,7 @@ const Exam = () => {
                                 <td>United States</td>
                                 <td>12/5/2020</td>
                                 <td className="flex gap-2">
-                                    <HiDotsHorizontal className="bg-[#ffc7c2] p-1 text-2xl rounded-md" />
+                                    <IoEyeOutline className="bg-[#ffc7c2] p-1 text-2xl rounded-md" />
                                     <FaRegEdit className="bg-[#ffc7c2] p-1 text-2xl rounded-md" />
                                     <RiDeleteBin2Line className="bg-[#ffc7c2] p-1 text-2xl rounded-md" />
                                 </td>

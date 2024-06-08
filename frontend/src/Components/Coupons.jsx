@@ -9,9 +9,60 @@ const Coupons = () => {
                 </div>
             </div>
             <div className="w-11/12 mx-auto">
-                <div className="bg-[#ffc7c2] mb-2 w-fit px-5 py-2 rounded-xl">
-                    Create New Module
+            <div className="bg-[#ffc7c2] mb-2 w-fit px-5 py-2 rounded-xl cursor-pointer" onClick={() => document.getElementById('my_modal_1').showModal()}>
+                    Create New Coupon
                 </div>
+                <dialog id="my_modal_1" className="modal">
+                    <div className="modal-box w-11/12 max-w-5xl bg-white text-xl">
+                        <div>
+                            <div className="grid grid-cols-4 items-center">
+                                <p className="">Coupon Name: </p>
+                                <input type="text" className="bg-[#d4fcd8] col-span-3 m-2 w-2/3" />
+                            </div>
+                            <div className="grid grid-cols-4 items-center">
+                                <p className="">Coupon Code: </p>
+                                <input type="text" className="bg-[#d4fcd8] col-span-3 m-2 w-2/3" />
+                            </div>
+                            <div className="grid grid-cols-4 items-center">
+                                <p className="">Discount Type: </p>
+                                <div className="flex items-center gap-5">
+                                    <p>%</p>
+                                    <input type="checkbox" className="toggle bg-[#ffc7c2]" checked />
+                                    <p>Fixed</p>
+                                </div>
+                            </div>
+                            <div className="grid grid-cols-4 items-center">
+                                <p className="">Discount On: </p>
+                                <div className="flex items-center gap-5">
+                                    <p>Recharge</p>
+                                    <input type="checkbox" className="toggle bg-[#ffc7c2]" checked />
+                                    <p>Exam</p>
+                                </div>
+                            </div>
+                            <div className="grid grid-cols-4 items-center">
+                                <p className="">Discount Amount: </p>
+                                <div className="flex items-center">
+                                    <input type="text" className="bg-[#d4fcd8] col-span-3 m-2 w-[50px]" />
+                                    <p>%</p>
+                                </div>
+                            </div>
+                            <div className="grid grid-cols-4 items-center">
+                                <p className="">Status: </p>
+                                <div className="flex items-center gap-5">
+                                    <p>Active</p>
+                                    <input type="checkbox" className="toggle bg-[#ffc7c2]" checked />
+                                    <p>Diactive</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="modal-action">
+                            <form method="dialog">
+                                <button className="bg-[#ffc7c2] py-3 px-5 rounded-lg mr-2">Add Coupon</button>
+                                <button className="bg-[#ffc7c2] py-3 px-5 rounded-lg">Cancel</button>
+                            </form>
+                        </div>
+                    </div>
+                </dialog>
                 <div className="">
                     <table className="table w-full ">
                         <thead className="bg-[#ffc7c2]">
