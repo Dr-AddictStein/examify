@@ -1,5 +1,4 @@
 import { FaRegEdit } from "react-icons/fa";
-import { HiDotsHorizontal } from "react-icons/hi";
 import { RiDeleteBin2Line } from "react-icons/ri";
 
 const Users = () => {
@@ -34,8 +33,57 @@ const Users = () => {
                                 <td>Canada</td>
                                 <td>12/16/2020</td>
                                 <td className="flex gap-2">
-                                    <HiDotsHorizontal className="bg-[#ffc7c2] p-1 text-2xl rounded-md" />
-                                    <FaRegEdit className="bg-[#ffc7c2] p-1 text-2xl rounded-md" />
+                                    <FaRegEdit className="bg-[#ffc7c2] p-1 text-2xl rounded-md cursor-pointer" onClick={() => document.getElementById('my_modal_2').showModal()} />
+                                    <dialog id="my_modal_2" className="modal">
+                                        <div className="modal-box w-11/12 max-w-5xl bg-[#e4ccfe] text-xl">
+                                            <div>
+                                                <div className="grid grid-cols-4 items-center">
+                                                    <p className="">Username: </p>
+                                                    <input type="text" className="bg-[#d4fcd8] col-span-3 m-2 w-2/3" />
+                                                </div>
+                                                <div className="grid grid-cols-4 items-center">
+                                                    <p className="">Mobile No: </p>
+                                                    <input type="text" className="bg-[#d4fcd8] col-span-3 m-2 w-2/3" />
+                                                </div>
+                                                <div className="grid grid-cols-4 items-center">
+                                                    <p className="">Address Street: </p>
+                                                    <input type="text" className="bg-[#d4fcd8] col-span-3 m-2 w-2/3" />
+                                                </div>
+                                                <div className="grid grid-cols-4 items-center">
+                                                    <p className="">Total Payment Done: </p>
+                                                    <div className="flex items-center">
+                                                        <p>₹</p>
+                                                        <input type="text" className="bg-[#d4fcd8] col-span-3 m-2 w-[50px]" />
+                                                    </div>
+                                                </div>
+                                                <div className="grid grid-cols-4 items-center">
+                                                    <p className="">Wallet Balance: </p>
+                                                    <div className="flex items-center">
+                                                        <input type="text" className="bg-[#d4fcd8] col-span-3 m-2 w-[50px]" />
+                                                        <p>/85</p>
+                                                    </div>
+                                                </div>
+                                                <div className="grid grid-cols-4 items-center">
+                                                    <p className="">Total Exam Attempted: </p>
+                                                    <p>15</p>
+                                                </div>
+                                                <div className="grid grid-cols-4 items-center">
+                                                    <p className="">Status: </p>
+                                                    <div className="flex items-center gap-5">
+                                                        <p>Active</p>
+                                                        <input type="checkbox" className="toggle bg-[#ffc7c2]" checked />
+                                                        <p>Diactive</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="modal-action">
+                                                <form method="dialog">
+                                                    <button className="bg-[#ffc7c2] py-3 px-5 rounded-lg mr-2">Update</button>
+                                                    <button className="bg-[#ffc7c2] py-3 px-5 rounded-lg">Cancel</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </dialog>
                                     <RiDeleteBin2Line className="bg-[#ffc7c2] p-1 text-2xl rounded-md" />
                                 </td>
                             </tr>
@@ -47,7 +95,6 @@ const Users = () => {
                                 <td>United States</td>
                                 <td>12/5/2020</td>
                                 <td className="flex gap-2">
-                                    <HiDotsHorizontal className="bg-[#ffc7c2] p-1 text-2xl rounded-md" />
                                     <FaRegEdit className="bg-[#ffc7c2] p-1 text-2xl rounded-md" />
                                     <RiDeleteBin2Line className="bg-[#ffc7c2] p-1 text-2xl rounded-md" />
                                 </td>
@@ -60,7 +107,6 @@ const Users = () => {
                                 <td>United States</td>
                                 <td>12/5/2020</td>
                                 <td className="flex gap-2">
-                                    <HiDotsHorizontal className="bg-[#ffc7c2] p-1 text-2xl rounded-md" />
                                     <FaRegEdit className="bg-[#ffc7c2] p-1 text-2xl rounded-md" />
                                     <RiDeleteBin2Line className="bg-[#ffc7c2] p-1 text-2xl rounded-md" />
                                 </td>
