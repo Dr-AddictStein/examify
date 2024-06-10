@@ -103,7 +103,74 @@ const Chapters = () => {
                                                 <p>Section Name:</p>
                                                 <p>Exam Name:</p>
                                                 <p>Total Question for Module:</p>
-                                                <p>Total Question Uploaded:</p>
+                                                <p>
+                                                    Total Question Uploaded: <button className="bg-[#ffc7c2] px-2 rounded-full" onClick={() => document.getElementById('my_modal_4').showModal()}>See Questions</button>
+                                                    <dialog id="my_modal_4" className="modal">
+                                                        <div className="modal-box w-full max-w-7xl bg-white text-xl">
+                                                            <div>
+                                                                <label className="input border-none bg-[#ffc7c2] mb-6 w-1/4 flex items-center gap-2">
+                                                                    <input type="text" className="grow" placeholder="Search" />
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-4 h-4 opacity-70"><path fillRule="evenodd" d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" clipRule="evenodd" /></svg>
+                                                                </label>
+                                                                <table className="table w-full ">
+                                                                    <thead className="bg-[#ffc7c2]">
+                                                                        <tr>
+                                                                            <td className="p-3">Serial no.</td>
+                                                                            <td>Question</td>
+                                                                            <td>A</td>
+                                                                            <td>B</td>
+                                                                            <td>C</td>
+                                                                            <td>D</td>
+                                                                            <td>Answer</td>
+                                                                            <td>Status</td>
+                                                                            <td>Action</td>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody className="bg-white">
+                                                                        <tr>
+                                                                            <td className="px-3 py-1">1</td>
+                                                                            <td>What is 5+6</td>
+                                                                            <td>A</td>
+                                                                            <td>B</td>
+                                                                            <td>C</td>
+                                                                            <td>D</td>
+                                                                            <td>D</td>
+                                                                            <td>Active</td>
+                                                                            <RiDeleteBin2Line className="bg-[#ffc7c2] p-1 text-2xl rounded-md" />
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td className="px-3 py-1">2</td>
+                                                                            <td>What is 5+6</td>
+                                                                            <td>A</td>
+                                                                            <td>B</td>
+                                                                            <td>C</td>
+                                                                            <td>C</td>
+                                                                            <td>D</td>
+                                                                            <td>Active</td>
+                                                                            <RiDeleteBin2Line className="bg-[#ffc7c2] p-1 text-2xl rounded-md" />
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td className="px-3 py-1">3</td>
+                                                                            <td>What is 1-8</td>
+                                                                            <td>A</td>
+                                                                            <td>B</td>
+                                                                            <td>B</td>
+                                                                            <td>C</td>
+                                                                            <td>D</td>
+                                                                            <td>Active</td>
+                                                                            <RiDeleteBin2Line className="bg-[#ffc7c2] p-1 text-2xl rounded-md" />
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                            <div className="modal-action">
+                                                                <form method="dialog">
+                                                                    <button className="bg-[#ffc7c2] py-3 px-5 rounded-lg">Back</button>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </dialog>
+                                                </p>
                                                 <p>Status:</p>
                                             </div>
                                             <div className="modal-action">
