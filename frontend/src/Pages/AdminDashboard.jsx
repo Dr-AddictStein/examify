@@ -90,12 +90,12 @@ const AdminDashboard = () => {
                             {/* <BsPersonVcard className="text-xl absolute" /> */}
                             <span className="pl-7">Attempts</span>
                         </Tab>
-                        {/* <div
-              className="font-semibold cursor-pointer flex gap-2 items-center text-red-500"
-            >
-              <MdLogout className="text-xl absolute" />
-              <span className="pl-7">Logout</span>
-            </div> */}
+                        <div
+                            className="font-semibold cursor-pointer flex gap-2 items-center text-red-500"
+                        >
+                            {/* <MdLogout className="text-xl absolute" /> */}
+                            <span className="pl-7">Logout</span>
+                        </div>
                     </TabList>
                 </div>
             </div>
@@ -174,12 +174,12 @@ const AdminDashboard = () => {
                             {/* <BsPersonVcard className="text-xl absolute" /> */}
                             <span className="pl-7">Attempts</span>
                         </Tab>
-                        {/* <div
-              className="font-semibold cursor-pointer flex gap-2 items-center text-red-500"
-            >
-              <MdLogout className="text-xl absolute" />
-              <span className="pl-7">Logout</span>
-            </div> */}
+                        <div
+                            className="font-semibold cursor-pointer flex gap-2 items-center text-red-500"
+                        >
+                            {/* <MdLogout className="text-xl absolute" /> */}
+                            <span className="pl-7">Logout</span>
+                        </div>
                     </TabList>
                 </div>
             </div>
